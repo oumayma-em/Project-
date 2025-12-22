@@ -16,8 +16,6 @@ const portfolioForm = document.getElementById("portfolio-form");
 const portfolioNameInput = document.getElementById("portfolio-name");
 const portfolioList = document.getElementById("portfolio-list");
 
-const totalValueEl = document.getElementById("kpi-total-value");
-
 cryptoForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -57,22 +55,6 @@ function renderCryptos() {
     cryptoTableBody.appendChild(tr);
   });
 }
-
-function deleteCrypto(id) {
-  cryptos = cryptos.filter(c => c.id !== id);
-  renderCryptos();
-  updateKPI();
-}
-
-
-function updateKPI() {
-  const total = cryptos.reduce(
-    (sum, c) => sum + c.quantity * c.buyPrice,
-    0
-  );
-  totalValueEl.textContent = `$${total.toFixed(2)}`;
-}
-
 portfolioForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
