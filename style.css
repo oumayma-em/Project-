@@ -31,18 +31,6 @@ body { font-family: Arial, sans-serif; background:#0d0d0d; color:#f5f5f5; }
 
 .page-section { margin-top: 1rem; }
 .hidden { display: none; }
-.kpi-container { display: flex; gap: 1rem; flex-wrap: wrap; }
-.kpi-card {
-  flex: 1;
-  min-width: 200px;
-  background:#161616;
-  padding: 1rem;
-  border-radius: 8px;
-}
-.kpi-card h3 { font-size: 0.9rem; color:#999; margin-bottom:0.5rem; }
-.kpi-card p { font-size: 1.4rem; font-weight:bold; }
-
-
 .chart-card {
   margin-top: 1.5rem;
   background:#161616;
